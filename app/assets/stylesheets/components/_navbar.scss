@@ -1,5 +1,5 @@
 /* Main navbar */
-.navbar-wagon {
+.navbar-title {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   transition: all 0.3s ease;
@@ -7,6 +7,7 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: space-between;
 }
 
