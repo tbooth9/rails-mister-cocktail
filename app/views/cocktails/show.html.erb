@@ -1,0 +1,21 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1472245088132-ccd50746725c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fa7ad7a324cc9efb65fe1a3abf6c287d&auto=format&fit=crop&w=1949&q=80');">
+  <div class="banner-content">
+    <h1><%= @cocktail.name %></h1>
+<!--     <p>Learn to code with us in Berlin</p>
+
+ --> 
+ 	<%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-danger" %>   
+ 	<%= link_to "Go Back", cocktails_path, class: "btn btn-danger" %>
+ 	<%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: {confirm: "Are you sure? Don't you love cocktails?"},  class: "btn btn-danger"%>
+
+ 	<p>
+ 		<%= link_to "add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+ 	</p>
+  </div>
+</div>
+
+<% @cocktail.doses.each do |dose| %>
+	<p><%= dose.description %> (<%= dose.ingredient.name %>) 
+		<%= link_to "delete", dose_path(dose), method: :delete%></p>
+<% end %>
+
